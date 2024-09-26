@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script>
+           
+        function calcSum(){
+            let a = parseInt(document.getElementById("num1").value);
+        let b = parseInt(document.getElementById("num2").value);
+       
+       //   wae dont have to do it , we use backend server
+
+        // let sum = a + b;
+        // document.getElementById("demo").innerHTML = "The sum is: "+ sum;
+    
+            fetch("https://sum-server.100xdevs.com/sum?a="+a+ "b" + b);
+
+        }
+
+      
+    </script>
+
+
+
+    <body>
+        <input id="num1" type="number" name="num1" value="000"><br>
+        <input id="num2" type="number" name="num2" value="000"><br>
+
+        <button onclick="calcSum()">Calculate Sum</button><br>
+        
+        <p id="demo">ans</p>
+
+        
+    </body>
+</html>
